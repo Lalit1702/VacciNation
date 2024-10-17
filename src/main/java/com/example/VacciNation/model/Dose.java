@@ -24,10 +24,13 @@ public class Dose {
     @Enumerated(value = EnumType.STRING)
     private VaccineBrand vaccineBrand;
 
-    private boolean taken;
-
     private String serialNumber;
 
     @CreationTimestamp
     private Date dateOfVaccination;
+
+    @OneToOne // 1st one-> Dose(current), 2nd-> patient(connecting class)
+    @JoinColumn // create  the foreign key column -> patient_id
+    Patient patient;
+
 }

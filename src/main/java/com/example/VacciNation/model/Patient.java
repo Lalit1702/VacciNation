@@ -22,6 +22,8 @@ public class Patient {
 
     private String age;
 
+    private boolean vaccinated;
+
     @Enumerated(value = EnumType.STRING)
     private Gender gender;
 
